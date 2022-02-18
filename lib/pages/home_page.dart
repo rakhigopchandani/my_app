@@ -7,16 +7,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //int days = 30;
-    String name = "Home";
+    //String name = "Home";
 
     return Scaffold(
       appBar: AppBar(
       
         title: Center(child: Text("MY CATALOG APP")),
       ),
-      body: Center(
+      body:Center(
+       
         
-        child: Text("Welcome To $name Page"),
+        child: Image.asset("assets/images/hey.png",
+        fit: BoxFit.cover,
+        ),
+      
+        
       ),
   
       drawer: Drawer(),
