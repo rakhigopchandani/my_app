@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../utils/widgets/drawer.dart';
+
 // ignore: use_key_in_widget_constructors
 class HomePage extends StatelessWidget {
   @override
@@ -17,14 +19,14 @@ class HomePage extends StatelessWidget {
       body:Center(
        
         
-        child: Image.asset("assets/images/hey.png",
-        fit: BoxFit.cover,
-        ),
+        child:Text("Welcome to HomePage"),
       
-        
+      
       ),
+    
   
-      drawer: Drawer(),
+      drawer: MyDrawer(),
+  
     );
   }
 }
