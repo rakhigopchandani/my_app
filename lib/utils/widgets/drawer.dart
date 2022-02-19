@@ -8,9 +8,8 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
-    final imageUrl = ""; 
-    //"https://www.google.com/imgres?imgurl=https%3A%2F%2Fuxwing.com%2Fwp-content%2Fthemes%2Fuxwing%2Fdownload%2F12-peoples-avatars%2Ffemale-user.png&imgrefurl=https%3A%2F%2Fuxwing.com%2Ffemale-user-icon%2F&tbnid=aHpbVUOaEtZjYM&vet=12ahUKEwiN6erb6Yn2AhWMNuwKHe0oA3YQMygOegUIARD-AQ..i&docid=7FjklY2KZgXiQM&w=488&h=512&q=user%20icon&hl=en&ved=2ahUKEwiN6erb6Yn2AhWMNuwKHe0oA3YQMygOegUIARD-AQ";
-
+    final imageUrl = Image.asset("assets/images/icon.png"); 
+    
     return Drawer(
       child: Container(
         color: Colors.brown,
@@ -24,7 +23,7 @@ class MyDrawer extends StatelessWidget {
                   accountName: Text("Rakhi Gopchandani"),
                   accountEmail: Text("rakhigopcahndani@gmail.com"),
                   currentAccountPicture: CircleAvatar(
-                    backgroundImage: NetworkImage(imageUrl),
+                    backgroundImage: (imageUrl.image),
                   ),
                 )),
             ListTile(
