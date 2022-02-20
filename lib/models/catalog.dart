@@ -31,12 +31,5 @@ class Item {
       image: map["image"],
     );
   }
-  toMap() => {
-        "id": id,
-        "name": name,
-        "des": desc,
-        "price": price,
-        "color": color,
-        "image": image,
-      };
+  
 }
