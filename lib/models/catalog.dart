@@ -1,19 +1,9 @@
-
+// ignore_for_file: unused_import, avoid_web_libraries_in_flutter
+import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 
-class CatalogModel{
-
-static final items = [
-  Item(
-id: 01,
-name:"IPhone 6",
-desc:"Apple 6th generation",
-price: 999,
-color: "#33505a",
-image: Image.asset("assets/images/iphone6.jpg"),
-)];
-
-
+class CatalogModel {
+  static List<Item> items = [];
 }
 
 class Item {
@@ -22,10 +12,31 @@ class Item {
   final String desc;
   final num price;
   final String color;
-  // ignore: prefer_typing_uninitialized_variables
-  final  image;
+  final String image;
 
-  Item({required this.id, required this.name, required this.desc, required this.price, required this.color, required this.image});
+  Item(
+      {required this.id,
+      required this.name,
+      required this.desc,
+      required this.price,
+      required this.color,
+      required this.image});
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      desc: map["desc"],
+      price: map["price"],
+      color: map["color"],
+      image: map["image"],
+    );
+  }
+  toMap() => {
+        "id": id,
+        "name": name,
+        "des": desc,
+        "price": price,
+        "color": color,
+        "image": image,
+      };
 }
-
-

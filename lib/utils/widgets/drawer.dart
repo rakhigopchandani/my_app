@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_declarations
+// ignore_for_file: prefer_const_constructors, prefer_const_declarations, avoid_web_libraries_in_flutter, unused_import
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 // ignore: use_key_in_widget_constructors
 class MyDrawer extends StatelessWidget {

@@ -1,11 +1,12 @@
 
-// ignore_for_file: prefer_const_constructors, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, avoid_web_libraries_in_flutter, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:my_app/pages/home_page.dart';
 import 'package:my_app/pages/login_page.dart';
 import 'package:my_app/utils/routes.dart';
 import 'package:my_app/utils/widgets/theme.dart';
+
 
 void main() {
   runApp(MyApp());
