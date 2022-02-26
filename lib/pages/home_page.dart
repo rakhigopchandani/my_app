@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, avoid_print, unused_import, avoid_web_libraries_in_flutter, unnecessary_null_comparison, import_of_legacy_library_into_null_safe, duplicate_import, avoid_unnecessary_containers, use_key_in_widget_constructors, duplicate_ignore, unnecessary_string_escapes
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_app/models/catalog.dart';
+import 'package:my_app/utils/routes.dart';
 import 'dart:convert';
 import 'package:my_app/utils/widgets/drawer.dart';
 import 'package:my_app/utils/widgets/home_widgets/catalog_header.dart';
@@ -44,6 +46,12 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
         backgroundColor: MyTheme.creamColor,
+        floatingActionButton: FloatingActionButton(onPressed: ()=> Navigator.pushNamed(context, MyRoutes.cartRoute),
+        backgroundColor: MyTheme.blackish,
+        child: Icon(CupertinoIcons.cart),
+        
+        ),
+        
         body: SafeArea(
             child: Container(
                 padding: Vx.m32,
