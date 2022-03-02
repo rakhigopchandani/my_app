@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_print, unused_import, avoid_web_libraries_in_flutter, unnecessary_null_comparison, import_of_legacy_library_into_null_safe, duplicate_import, avoid_unnecessary_containers, use_key_in_widget_constructors, duplicate_ignore, unnecessary_string_escapes
+// ignore_for_file: prefer_const_constructors, avoid_print, unused_import, avoid_web_libraries_in_flutter, unnecessary_null_comparison, import_of_legacy_library_into_null_safe, duplicate_import, avoid_unnecessary_containers, use_key_in_widget_constructors, duplicate_ignore, unnecessary_string_escapes, deprecated_member_use
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: context.cardColor,
         floatingActionButton: FloatingActionButton(onPressed: ()=> Navigator.pushNamed(context, MyRoutes.cartRoute),
-        backgroundColor: MyTheme.lightPurle,
+        backgroundColor: context.theme.buttonColor,
         child: Icon(CupertinoIcons.cart),
         
         ),

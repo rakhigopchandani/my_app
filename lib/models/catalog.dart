@@ -1,9 +1,16 @@
-// ignore_for_file: unused_import, avoid_web_libraries_in_flutter
+// ignore_for_file: unused_import, avoid_web_libraries_in_flutter, null_closures
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 
 class CatalogModel {
   static List<Item> items = [];
+
+// get item by ID
+  static Item getBuId(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  //get item by position
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
@@ -31,5 +38,4 @@ class Item {
       image: map["image"],
     );
   }
-  
 }
