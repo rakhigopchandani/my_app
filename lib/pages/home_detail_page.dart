@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_null_comparison, prefer_const_constructors
+// ignore_for_file: unnecessary_null_comparison, prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:my_app/utils/widgets/theme.dart';
@@ -29,7 +29,7 @@ class HomeDetailPage extends StatelessWidget {
                       onPressed: () {},
                       style: ButtonStyle(
                           backgroundColor:
-                              MaterialStateProperty.all(MyTheme.blackish),
+                              MaterialStateProperty.all(context.theme.buttonColor),
                           shape: MaterialStateProperty.all(StadiumBorder())),
                       child: "Add to cart".text.size(0).make())
                   .wh(100, 33)

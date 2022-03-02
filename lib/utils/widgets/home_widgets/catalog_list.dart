@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_null_comparison, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, unnecessary_null_comparison, use_key_in_widget_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:my_app/models/catalog.dart';
@@ -58,7 +58,7 @@ class CatalogItem extends StatelessWidget {
                 "\$${catalog.price}".text.size(0).xl.bold.make(),
                 ElevatedButton(onPressed: (){},
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(MyTheme.blackish),
+                  backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
                   shape: MaterialStateProperty.all(StadiumBorder())
                 ),
                  child: "Buy".text.size(0).make())

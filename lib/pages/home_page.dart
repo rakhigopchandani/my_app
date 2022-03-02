@@ -45,9 +45,9 @@ class _HomePageState extends State<HomePage> {
     //String name = "Home";
 
     return Scaffold(
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.cardColor,
         floatingActionButton: FloatingActionButton(onPressed: ()=> Navigator.pushNamed(context, MyRoutes.cartRoute),
-        backgroundColor: MyTheme.blackish,
+        backgroundColor: MyTheme.lightPurle,
         child: Icon(CupertinoIcons.cart),
         
         ),
