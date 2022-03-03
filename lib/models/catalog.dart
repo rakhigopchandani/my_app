@@ -3,6 +3,10 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 
 class CatalogModel {
+  static final catalogModel = CatalogModel._internal();
+  CatalogModel._internal();
+
+  factory CatalogModel() => catalogModel;
   static List<Item> items = [];
 
 // get item by ID
@@ -14,7 +18,7 @@ class CatalogModel {
 }
 
 class Item {
-  final num id;
+  final int id;
   final String name;
   final String desc;
   final num price;

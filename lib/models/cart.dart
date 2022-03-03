@@ -3,8 +3,12 @@
 import 'package:my_app/models/catalog.dart';
 
 class CartModel {
-  // catalog field
+  static final cartModel = CartModel._internal();
+  CartModel._internal();
 
+  factory CartModel() => cartModel;
+
+  // catalog field
   late CatalogModel _catalog;
 
   //collection of Ids - stores Ids of each Item
@@ -23,13 +27,13 @@ class CartModel {
   num get totalPrice =>
       items.fold(0, (total, current) => total + current.price);
 
-  //Add item
-  void add(Item item) {
-    _itemIds.add(item.id);
-  }
-
   // Remove item
   void remove(Item item) {
     _itemIds.remove(item.id);
+  }
+
+  //Add item
+  void add(Item item) {
+    _itemIds.add(item.id);
   }
 }
